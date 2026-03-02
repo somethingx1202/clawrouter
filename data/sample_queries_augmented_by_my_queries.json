@@ -1,0 +1,67 @@
+{
+    "simple": [
+        "What color do you get when you mix red and blue?",
+        "What planet is closest to the Sun?",
+        "How many sides does a triangle have?",
+        "What language is spoken in Brazil?",
+        "What is the boiling point of water in Celsius?",
+        "Which is taller — a door or a refrigerator?",
+        "What letter does the McDonald's logo look like?",
+        "If you hold a pencil and let go, which direction does it fall?",
+        "What color is the inside of a watermelon?",
+        "What is the current price of Bitcoin?",
+        "Who is the current Prime Minister of the UK?",
+        "What was the high temperature in Tokyo today?",
+        "What movie is currently number one at the US box office?",
+        "What color is the jersey of the team currently leading the English Premier League?",
+        "What animal is on the new US quarter released most recently?",
+        "What does the current Google Doodle on google.com show today?",
+        "What color is the logo of the app currently ranked #1 on the Apple App Store?"
+    ],
+    "moderate": [
+        "How does a blockchain work and what are its main use cases?",
+        "What is the difference between a recession and a depression, and how do economists distinguish between them?",
+        "Explain how vaccines work and why herd immunity requires a certain percentage of the population to be vaccinated.",
+        "What are the key differences between civil law and common law legal systems, and which countries use each?",
+        "How does compound interest differ from simple interest, and why does it have such a large effect over long time periods?",
+        "Explain how the layout of a piano keyboard maps to musical scales — why are some keys black, some white, and why aren't they evenly spaced?",
+        "How does human depth perception work, and why do optical illusions like the Ames room trick the brain into misjudging size?",
+        "Describe how a 4-stroke internal combustion engine works, explaining what physically happens inside the cylinder at each stage.",
+        "What makes the architectural design of a Gothic cathedral structurally different from a Roman temple, and how do flying buttresses distribute weight?"
+    ],
+    "complex": [
+        "Explain the mathematical foundations of transformer attention mechanisms and their computational complexity implications.",
+        "Explain the CAP theorem and design a database strategy for a global e-commerce platform that needs strong consistency for inventory management but high availability for product browsing — how do you partition the problem, and what specific technologies handle each side?",
+        "Trace how a single HTTP request travels from a user's browser to a server and back — covering DNS resolution, TCP handshake, TLS negotiation, load balancing, reverse proxying, application processing, and response caching — and identify where each millisecond of latency is introduced.",
+        "Compare the theoretical expressiveness of recurrent neural networks, transformers, and state space models (e.g., Mamba) — what are the formal computational classes each can represent, how do their memory and inference costs scale with sequence length, and under what conditions would you choose each for production deployment?",
+        "Analyze the game-theoretic dynamics of a multi-round sealed-bid auction where bidders have incomplete information about each other's valuations — derive the Bayesian Nash equilibrium bidding strategy for risk-neutral agents, then explain how the result changes when agents are risk-averse and when collusion is possible.",
+        "Analyze how convolutional neural networks progressively build up feature representations — starting from edge detection in early layers to object recognition in deep layers — and explain why this hierarchical visual decomposition mirrors the human visual cortex's ventral stream.",
+        "Design a computer vision pipeline for an autonomous vehicle that must distinguish between a pedestrian stepping off a curb, a plastic bag blowing across the road, and a child's ball rolling into the street — what architectural choices handle these cases, and where are the failure modes most dangerous?",
+        "Compare the information density of Egyptian hieroglyphs, Chinese characters, and the Latin alphabet — how does each writing system encode meaning through visual structure (radicals, determinatives, letter combinations), and what are the measurable consequences for reading speed, learning difficulty, and OCR system accuracy?",
+        "Explain how diffusion models generate images by iteratively denoising from pure noise to coherent pixels — what is happening mathematically at each timestep, how does the U-Net architecture's spatial structure enable this, and why do these models struggle with specific failure modes like generating correct numbers of fingers or rendering legible text?"
+    ],
+    "reasoning": [
+        "Three people check into a hotel room that costs $30. They each contribute $10. Later, the clerk realizes the room only costs $25 and gives $5 to the bellboy to return. The bellboy keeps $2 and gives $1 back to each guest. Now each guest has paid $9 (total $27), plus the bellboy has $2. That's only $29. Where did the other dollar go?",
+        "A bat and a ball cost $1.10 together. The bat costs $1.00 more than the ball. How much does the ball cost?",
+        "If you're running a race and you pass the person in second place, what place are you in now?",
+        "A doctor gives you three pills and tells you to take one every 30 minutes. How long does it take to finish all three pills?",
+        "You have a 3-gallon jug and a 5-gallon jug with no markings. How do you measure exactly 4 gallons of water?",
+        "Look up the current US national debt and the total combined net worth of all US billionaires. If you liquidated 100% of their wealth, could you pay off the debt? Most people assume yes — what's the actual answer, and why is \"liquidating\" net worth not as simple as it sounds?",
+        "Search for the current world population and the total land area of Texas. If every person on Earth stood in Texas, how many square feet would each person get? Most people assume it would be impossibly cramped — is it?",
+        "Look up the speed of the International Space Station and the circumference of Earth. The ISS orbits every ~90 minutes. If an astronaut celebrated their birthday on the ISS, how many sunrises would they see that day? Most people say one — why is the real answer counterintuitive?",
+        "Search for the current price of a gallon of gas and the current federal minimum wage. How many minutes must a minimum wage worker work to buy one gallon? Now find the same two figures from 1970 (nominal, not inflation-adjusted). Has gas become more or less affordable relative to minimum wage — and why does the answer surprise most people?"
+    ],
+    "coding": [
+        "Implement a rate limiter using the token bucket algorithm in Python.",
+        "Write a Python function that merges two sorted linked lists into a single sorted linked list.",
+        "Implement a least recently used (LRU) cache in Python with O(1) get and put operations.",
+        "Write a Python function to serialize and deserialize a binary tree to and from a string.",
+        "Create a SQL query to find all employees who earn more than their direct manager.",
+        "Write a Python function that finds the minimum window substring containing all characters of a given target string.",
+        "Implement a trie (prefix tree) in Python with insert, search, and starts_with methods.",
+        "Write a Python function to detect if a directed graph contains a cycle using depth-first search.",
+        "Create a SQL query to calculate a 7-day rolling average of daily sales from an orders table.",
+        "Write a Python function that evaluates a mathematical expression given as a string (supporting +, -, *, /, and parentheses).",
+        "Implement a thread-safe producer-consumer queue in Python using only the threading module."
+    ]
+}

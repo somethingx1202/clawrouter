@@ -1,0 +1,274 @@
+{
+  "metadata": {
+    "probed_at": "2026-03-02T09:14:52.826351+00:00",
+    "probe_queries_per_category": 2,
+    "source": "sample_queries_augmented_by_my_queries.json",
+    "evaluator_model": "trinity-mini",
+    "models_probed": [
+      "gemma-3-4b",
+      "llama-3.2-3b",
+      "gemma-3n-e4b",
+      "trinity-mini",
+      "gemma-3-12b",
+      "mistral-small-24b",
+      "gemma-3-27b",
+      "nemotron-nano",
+      "llama-3.3-70b",
+      "deepseek-r1-0528"
+    ],
+    "total_probes": 57
+  },
+  "quality_thresholds": {
+    "simple": 7.85,
+    "moderate": 7.62,
+    "complex": 6.9,
+    "reasoning": 8.5,
+    "coding": 8.5
+  },
+  "agents": {
+    "gemma-3-4b": {
+      "tier": "small",
+      "simple": {
+        "cloud": {
+          "latency_median_ms": 1980.7,
+          "quality_avg": 6.5
+        },
+        "edge": {
+          "latency_median_ms": 396.1,
+          "quality_avg": 6.5
+        }
+      },
+      "moderate": {
+        "cloud": {
+          "latency_median_ms": 15634.7,
+          "quality_avg": 8.35
+        },
+        "edge": {
+          "latency_median_ms": 3126.9,
+          "quality_avg": 8.35
+        }
+      },
+      "complex": {
+        "cloud": {
+          "latency_median_ms": 15447.2,
+          "quality_avg": 7.5
+        },
+        "edge": {
+          "latency_median_ms": 3089.4,
+          "quality_avg": 7.5
+        }
+      },
+      "reasoning": {
+        "cloud": {
+          "latency_median_ms": 4735.1,
+          "quality_avg": 6.5
+        },
+        "edge": {
+          "latency_median_ms": 947.0,
+          "quality_avg": 6.5
+        }
+      },
+      "coding": {
+        "cloud": {
+          "latency_median_ms": 14339.0,
+          "quality_avg": 9.25
+        },
+        "edge": {
+          "latency_median_ms": 2867.8,
+          "quality_avg": 9.25
+        }
+      }
+    },
+    "llama-3.2-3b": {
+      "tier": "small"
+    },
+    "gemma-3n-e4b": {
+      "tier": "small",
+      "simple": {
+        "cloud": {
+          "latency_median_ms": 1238.9,
+          "quality_avg": 9.0
+        },
+        "edge": {
+          "latency_median_ms": 247.8,
+          "quality_avg": 9.0
+        }
+      },
+      "moderate": {
+        "cloud": {
+          "latency_median_ms": 14821.2,
+          "quality_avg": 8.0
+        },
+        "edge": {
+          "latency_median_ms": 2964.2,
+          "quality_avg": 8.0
+        }
+      },
+      "complex": {
+        "cloud": {
+          "latency_median_ms": 14907.7,
+          "quality_avg": 7.75
+        },
+        "edge": {
+          "latency_median_ms": 2981.5,
+          "quality_avg": 7.75
+        }
+      },
+      "reasoning": {
+        "cloud": {
+          "latency_median_ms": 7391.7,
+          "quality_avg": 8.7
+        },
+        "edge": {
+          "latency_median_ms": 1478.3,
+          "quality_avg": 8.7
+        }
+      },
+      "coding": {
+        "cloud": {
+          "latency_median_ms": 14553.6,
+          "quality_avg": 9.25
+        },
+        "edge": {
+          "latency_median_ms": 2910.7,
+          "quality_avg": 9.25
+        }
+      }
+    },
+    "trinity-mini": {
+      "tier": "medium",
+      "simple": {
+        "cloud": {
+          "latency_median_ms": 3324.9,
+          "quality_avg": 8.0
+        }
+      },
+      "moderate": {
+        "cloud": {
+          "latency_median_ms": 5083.2,
+          "quality_avg": 8.75
+        }
+      },
+      "complex": {
+        "cloud": {
+          "latency_median_ms": 5766.6,
+          "quality_avg": 6.5
+        }
+      },
+      "reasoning": {
+        "cloud": {
+          "latency_median_ms": 4164.3,
+          "quality_avg": 9.0
+        }
+      },
+      "coding": {
+        "cloud": {
+          "latency_median_ms": 5413.5,
+          "quality_avg": 6.25
+        }
+      }
+    },
+    "gemma-3-12b": {
+      "tier": "medium",
+      "simple": {
+        "cloud": {
+          "latency_median_ms": 3315.7,
+          "quality_avg": 8.7
+        }
+      },
+      "moderate": {
+        "cloud": {
+          "latency_median_ms": 21727.9,
+          "quality_avg": 8.0
+        }
+      },
+      "complex": {
+        "cloud": {
+          "latency_median_ms": 20275.3,
+          "quality_avg": 7.5
+        }
+      },
+      "reasoning": {
+        "cloud": {
+          "latency_median_ms": 8929.1,
+          "quality_avg": 9.25
+        }
+      },
+      "coding": {
+        "cloud": {
+          "latency_median_ms": 19615.2,
+          "quality_avg": 9.0
+        }
+      }
+    },
+    "mistral-small-24b": {
+      "tier": "medium"
+    },
+    "gemma-3-27b": {
+      "tier": "medium",
+      "simple": {
+        "cloud": {
+          "latency_median_ms": 1782.3,
+          "quality_avg": 7.75
+        }
+      },
+      "moderate": {
+        "cloud": {
+          "latency_median_ms": 19767.3,
+          "quality_avg": 8.25
+        }
+      },
+      "complex": {
+        "cloud": {
+          "latency_median_ms": 20447.3,
+          "quality_avg": 6.0
+        }
+      },
+      "reasoning": {
+        "cloud": {
+          "latency_median_ms": 6390.1,
+          "quality_avg": 9.0
+        }
+      }
+    },
+    "nemotron-nano": {
+      "tier": "medium",
+      "simple": {
+        "cloud": {
+          "latency_median_ms": 6018.8,
+          "quality_avg": 8.95
+        }
+      },
+      "moderate": {
+        "cloud": {
+          "latency_median_ms": 13349.9,
+          "quality_avg": 5.25
+        }
+      },
+      "complex": {
+        "cloud": {
+          "latency_median_ms": 9218.5,
+          "quality_avg": 7.3
+        }
+      },
+      "reasoning": {
+        "cloud": {
+          "latency_median_ms": 9802.1,
+          "quality_avg": 10.0
+        }
+      },
+      "coding": {
+        "cloud": {
+          "latency_median_ms": 13443.5,
+          "quality_avg": 8.75
+        }
+      }
+    },
+    "llama-3.3-70b": {
+      "tier": "large"
+    },
+    "deepseek-r1-0528": {
+      "tier": "reasoning"
+    }
+  }
+}
