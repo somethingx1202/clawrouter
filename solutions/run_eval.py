@@ -33,7 +33,6 @@ async def main():
         seed=42,
         max_concurrent=3,
     )
-
     # Benchmark our custom router
     print("\n--- Benchmarking LatencyAndQualityAwareProbing ---")
     custom_router = CustomRouter()
