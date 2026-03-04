@@ -1,4 +1,4 @@
-# SOLUTIONS_README.md
+# SOLUTION.md
 
 ## Pipeline Architecture and Design Rationale
 
@@ -12,13 +12,13 @@
 OFFLINE: Probing Phase (run once)
 ┌──────────────────────────────────────────────────────────────────────┐
 │  sample_queries (2 per category)                                     │
-│    × 10 models (gemma-3-4b, gemma-3n-e4b, trinity-mini, ...)       │
+│    × 10 models (gemma-3-4b, gemma-3n-e4b, trinity-mini, ...)         │
 │    × 5 categories (simple, moderate, complex, reasoning, coding)     │
 │                                                                      │
 │  For each (model, category):                                         │
 │    1. Send query to OpenRouter API → measure cloud latency           │
 │    2. Evaluate response quality via LLM-as-judge (trinity-mini)      │
-│    3. Compute edge latency = cloud × 0.2 (SMALL tier only)          │
+│    3. Compute edge latency = cloud × 0.2 (SMALL tier only)           │
 │                                                                      │
 │  Aggregate:                                                          │
 │    - Per-model, per-category: median latency + mean quality          │
