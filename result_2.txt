@@ -1,0 +1,318 @@
+uv run python solutions/run_eval.py
+================================================================================
+CUSTOM ROUTER EVALUATION
+================================================================================
+
+  Benchmarking: Random
+  ----------------------------------------
+  Phase 1: Running inference...
+  [simple] trinity-mini@cloud: latency=2768ms
+  [simple] gemma-3-4b@cloud: latency=3272ms
+  [simple] gemma-3n-e4b@edge: latency=297ms
+  [moderate] llama-3.2-3b@cloud: latency=5586ms
+  [moderate] gemma-3n-e4b@edge: latency=8235ms
+  [moderate] gemma-3-4b@cloud: latency=37974ms
+  [complex] gemma-3-4b@edge: latency=6307ms
+  [complex] gemma-3n-e4b@edge: latency=6127ms
+  [reasoning] llama-3.3-70b@cloud: latency=10329ms
+  [reasoning] llama-3.2-3b@edge: latency=184ms
+  [reasoning] gemma-3-4b@cloud: latency=6358ms
+  [complex] gemma-3-4b@edge: latency=6105ms
+  [coding] gemma-3n-e4b@cloud: latency=30900ms
+  [coding] mistral-small-24b@cloud: latency=40746ms
+  [coding] gemma-3-4b@edge: latency=4225ms
+  Phase 2: Batch evaluating 15 responses...
+    Evaluating batch 1/3 (5 items)...
+    Evaluating batch 2/3 (5 items)...
+    Evaluating batch 3/3 (5 items)...
+  [simple] gemma-3-4b@cloud: quality=7.0/10
+  [simple] trinity-mini@cloud: quality=8.0/10
+  [simple] gemma-3n-e4b@edge: quality=6.0/10
+  [moderate] gemma-3n-e4b@edge: quality=10.0/10
+  [moderate] llama-3.2-3b@cloud: quality=10.0/10
+  [moderate] gemma-3-4b@cloud: quality=6.0/10
+  [complex] gemma-3-4b@edge: quality=7.0/10
+  [complex] gemma-3n-e4b@edge: quality=6.0/10
+  [complex] gemma-3-4b@edge: quality=6.0/10
+  [reasoning] llama-3.3-70b@cloud: quality=9.0/10
+  [reasoning] llama-3.2-3b@edge: quality=7.0/10
+  [reasoning] gemma-3-4b@cloud: quality=9.0/10
+  [coding] gemma-3n-e4b@cloud: quality=9.0/10
+  [coding] mistral-small-24b@cloud: quality=8.0/10
+  [coding] gemma-3-4b@edge: quality=9.0/10
+
+  >> Cooldown 60s to avoid rate limits...
+
+  Benchmarking: Static(gemma-3-4b@edge)
+  ----------------------------------------
+  Phase 1: Running inference...
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  [simple] gemma-3-4b@edge: latency=347ms
+  [simple] gemma-3-4b@edge: latency=633ms
+  [simple] gemma-3-4b@edge: latency=377ms
+  [moderate] gemma-3-4b@edge: latency=4697ms
+  [moderate] gemma-3-4b@edge: latency=5386ms
+  [complex] gemma-3-4b@edge: latency=5449ms
+  [moderate] gemma-3-4b@edge: latency=6414ms
+  [complex] gemma-3-4b@edge: latency=5117ms
+  [complex] gemma-3-4b@edge: latency=5198ms
+  [reasoning] gemma-3-4b@edge: latency=552ms
+  [reasoning] gemma-3-4b@edge: latency=783ms
+  [reasoning] gemma-3-4b@edge: latency=1294ms
+  [coding] gemma-3-4b@edge: latency=5917ms
+  [coding] gemma-3-4b@edge: latency=5892ms
+  [coding] gemma-3-4b@edge: latency=3873ms
+  Phase 2: Batch evaluating 15 responses...
+    Evaluating batch 1/3 (5 items)...
+    Evaluating batch 2/3 (5 items)...
+    Evaluating batch 3/3 (5 items)...
+  [simple] gemma-3-4b@edge: quality=6.0/10
+  [simple] gemma-3-4b@edge: quality=8.0/10
+  [simple] gemma-3-4b@edge: quality=6.0/10
+  [moderate] gemma-3-4b@edge: quality=10.0/10
+  [moderate] gemma-3-4b@edge: quality=10.0/10
+  [moderate] gemma-3-4b@edge: quality=8.0/10
+  [complex] gemma-3-4b@edge: quality=7.0/10
+  [complex] gemma-3-4b@edge: quality=7.0/10
+  [complex] gemma-3-4b@edge: quality=6.0/10
+  [reasoning] gemma-3-4b@edge: quality=9.0/10
+  [reasoning] gemma-3-4b@edge: quality=9.0/10
+  [reasoning] gemma-3-4b@edge: quality=7.0/10
+  [coding] gemma-3-4b@edge: quality=8.0/10
+  [coding] gemma-3-4b@edge: quality=8.0/10
+  [coding] gemma-3-4b@edge: quality=9.0/10
+
+  >> Cooldown 60s to avoid rate limits...
+
+  Benchmarking: Static(mistral-small-24b@cloud)
+  ----------------------------------------
+  Phase 1: Running inference...
+  [simple] mistral-small-24b@cloud: latency=2431ms
+  [simple] mistral-small-24b@cloud: latency=5507ms
+  [simple] mistral-small-24b@cloud: latency=4931ms
+  [moderate] mistral-small-24b@cloud: latency=50003ms
+  [moderate] mistral-small-24b@cloud: latency=66851ms
+  [moderate] mistral-small-24b@cloud: latency=52587ms
+  [complex] mistral-small-24b@cloud: latency=54885ms
+  [complex] mistral-small-24b@cloud: latency=43465ms
+  [reasoning] mistral-small-24b@cloud: latency=2021ms
+  [reasoning] mistral-small-24b@cloud: latency=4290ms
+  [reasoning] mistral-small-24b@cloud: latency=62061ms
+  [complex] mistral-small-24b@cloud: latency=95623ms
+  [coding] mistral-small-24b@cloud: latency=25785ms
+  [coding] mistral-small-24b@cloud: latency=12775ms
+  [coding] mistral-small-24b@cloud: latency=38205ms
+  Phase 2: Batch evaluating 15 responses...
+    Evaluating batch 1/3 (5 items)...
+    Evaluating batch 2/3 (5 items)...
+    Evaluating batch 3/3 (5 items)...
+  [simple] mistral-small-24b@cloud: quality=7.0/10
+  [simple] mistral-small-24b@cloud: quality=8.0/10
+  [simple] mistral-small-24b@cloud: quality=9.0/10
+  [moderate] mistral-small-24b@cloud: quality=8.0/10
+  [moderate] mistral-small-24b@cloud: quality=9.0/10
+  [moderate] mistral-small-24b@cloud: quality=8.8/10
+  [complex] mistral-small-24b@cloud: quality=8.8/10
+  [complex] mistral-small-24b@cloud: quality=8.8/10
+  [complex] mistral-small-24b@cloud: quality=8.8/10
+  [reasoning] mistral-small-24b@cloud: quality=10.0/10
+  [reasoning] mistral-small-24b@cloud: quality=7.0/10
+  [reasoning] mistral-small-24b@cloud: quality=9.0/10
+  [coding] mistral-small-24b@cloud: quality=8.0/10
+  [coding] mistral-small-24b@cloud: quality=8.0/10
+  [coding] mistral-small-24b@cloud: quality=8.0/10
+
+  >> Cooldown 60s to avoid rate limits...
+
+  Benchmarking: LatencyAndQualityAwareProbing
+  ----------------------------------------
+  Phase 1: Running inference...
+  [simple] llama-3.2-3b@edge: latency=132ms
+  [simple] llama-3.2-3b@edge: latency=132ms
+  [simple] llama-3.2-3b@edge: latency=185ms
+  [moderate] llama-3.2-3b@edge: latency=1007ms
+  [moderate] llama-3.2-3b@edge: latency=1149ms
+  [moderate] llama-3.2-3b@edge: latency=1125ms
+  [complex] gemma-3n-e4b@edge: latency=6382ms
+  [complex] gemma-3n-e4b@edge: latency=6424ms
+  [reasoning] llama-3.2-3b@edge: latency=412ms
+  [reasoning] llama-3.2-3b@edge: latency=208ms
+  Rate limited, waiting 10s (attempt 1/3)
+  [reasoning] gemma-3n-e4b@edge: latency=2029ms
+  [complex] gemma-3n-e4b@edge: latency=8341ms
+  [coding] gemma-3n-e4b@edge: latency=5706ms
+  [coding] gemma-3n-e4b@edge: latency=6593ms
+  [coding] gemma-3n-e4b@edge: latency=3632ms
+  Phase 2: Batch evaluating 15 responses...
+    Evaluating batch 1/3 (5 items)...
+    Evaluating batch 2/3 (5 items)...
+    Evaluating batch 3/3 (5 items)...
+  [simple] llama-3.2-3b@edge: quality=10.0/10
+  [simple] llama-3.2-3b@edge: quality=10.0/10
+  [simple] llama-3.2-3b@edge: quality=10.0/10
+  [moderate] llama-3.2-3b@edge: quality=8.0/10
+  [moderate] llama-3.2-3b@edge: quality=8.0/10
+  [moderate] llama-3.2-3b@edge: quality=10.0/10
+  [complex] gemma-3n-e4b@edge: quality=7.0/10
+  [complex] gemma-3n-e4b@edge: quality=7.0/10
+  [complex] gemma-3n-e4b@edge: quality=7.0/10
+  [reasoning] llama-3.2-3b@edge: quality=10.0/10
+  [reasoning] llama-3.2-3b@edge: quality=8.0/10
+  [reasoning] gemma-3n-e4b@edge: quality=9.0/10
+  [coding] gemma-3n-e4b@edge: quality=8.0/10
+  [coding] gemma-3n-e4b@edge: quality=9.0/10
+  [coding] gemma-3n-e4b@edge: quality=8.0/10
+
+====================================================================================================
+RANDOM BENCHMARK RESULTS
+====================================================================================================
+
+Overall Statistics:
+  Total queries:     15
+  Average latency:   11294.1 ms
+  Timeout rate:      0.0%
+  Average quality:   7.80/10
+  Total cost:        $0.000951
+
+Results by Query Category:
+----------------------------------------------------------------------------------------------------
+Category      Count    Latency    Quality         Cost   Top Models                              
+----------------------------------------------------------------------------------------------------
+simple            3     2112ms      7.00/10 $  0.000123   gemma-3-4b@cloud(1), trinity-mini@cloud(1)
+moderate          3    17265ms      8.67/10 $  0.000119   gemma-3n-e4b@edge(1), llama-3.2-3b@cloud(1)
+complex           3     6180ms      6.33/10 $  0.000079   gemma-3-4b@edge(2), gemma-3n-e4b@edge(1)
+reasoning         3     5624ms      8.33/10 $  0.000179   llama-3.3-70b@cloud(1), llama-3.2-3b@edge(1)
+coding            3    25290ms      8.67/10 $  0.000451   gemma-3n-e4b@cloud(1), mistral-small-24b@cloud(1)
+
+Results by Model Tier:
+----------------------------------------------------------------------------------------------------
+  Tier        Count  Avg Latency  Avg Quality   Total Cost
+  ---------- ------ ------------ ------------ ------------
+  small          12       9631ms        7.67/10 $  0.000286
+  medium          2      21757ms        8.00/10 $  0.000498
+  large           1      10329ms        9.00/10 $  0.000167
+
+Results by Deployment:
+----------------------------------------------------------------------------------------------------
+  Deploy    Count  Avg Latency  Avg Quality   Total Cost
+  -------- ------ ------------ ------------ ------------
+  edge          7       4497ms        7.29/10 $  0.000162
+  cloud         8      17241ms        8.25/10 $  0.000789
+
+====================================================================================================
+STATIC(GEMMA-3-4B@EDGE) BENCHMARK RESULTS
+====================================================================================================
+
+Overall Statistics:
+  Total queries:     15
+  Average latency:   3462.0 ms
+  Timeout rate:      0.0%
+  Average quality:   7.87/10
+  Total cost:        $0.000017
+
+Results by Query Category:
+----------------------------------------------------------------------------------------------------
+Category      Count    Latency    Quality         Cost   Top Models                              
+----------------------------------------------------------------------------------------------------
+simple            3      452ms      6.67/10 $  0.000002   gemma-3-4b@edge(3)
+moderate          3     5499ms      9.33/10 $  0.000002   gemma-3-4b@edge(3)
+complex           3     5254ms      6.67/10 $  0.000004   gemma-3-4b@edge(3)
+reasoning         3      876ms      8.33/10 $  0.000008   gemma-3-4b@edge(3)
+coding            3     5227ms      8.33/10 $  0.000002   gemma-3-4b@edge(3)
+
+Results by Model Tier:
+----------------------------------------------------------------------------------------------------
+  Tier        Count  Avg Latency  Avg Quality   Total Cost
+  ---------- ------ ------------ ------------ ------------
+  small          15       3462ms        7.87/10 $  0.000017
+
+Results by Deployment:
+----------------------------------------------------------------------------------------------------
+  Deploy    Count  Avg Latency  Avg Quality   Total Cost
+  -------- ------ ------------ ------------ ------------
+  edge         15       3462ms        7.87/10 $  0.000017
+
+====================================================================================================
+STATIC(MISTRAL-SMALL-24B@CLOUD) BENCHMARK RESULTS
+====================================================================================================
+
+Overall Statistics:
+  Total queries:     15
+  Average latency:   34761.4 ms
+  Timeout rate:      0.0%
+  Average quality:   8.41/10
+  Total cost:        $0.003691
+
+Results by Query Category:
+----------------------------------------------------------------------------------------------------
+Category      Count    Latency    Quality         Cost   Top Models                              
+----------------------------------------------------------------------------------------------------
+simple            3     4290ms      8.00/10 $  0.000127   mistral-small-24b@cloud(3)
+moderate          3    56480ms      8.60/10 $  0.001045   mistral-small-24b@cloud(3)
+complex           3    64658ms      8.80/10 $  0.001449   mistral-small-24b@cloud(3)
+reasoning         3    22791ms      8.67/10 $  0.000266   mistral-small-24b@cloud(3)
+coding            3    25588ms      8.00/10 $  0.000803   mistral-small-24b@cloud(3)
+
+Results by Model Tier:
+----------------------------------------------------------------------------------------------------
+  Tier        Count  Avg Latency  Avg Quality   Total Cost
+  ---------- ------ ------------ ------------ ------------
+  medium         15      34761ms        8.41/10 $  0.003691
+
+Results by Deployment:
+----------------------------------------------------------------------------------------------------
+  Deploy    Count  Avg Latency  Avg Quality   Total Cost
+  -------- ------ ------------ ------------ ------------
+  cloud        15      34761ms        8.41/10 $  0.003691
+
+====================================================================================================
+LATENCYANDQUALITYAWAREPROBING BENCHMARK RESULTS
+====================================================================================================
+
+Overall Statistics:
+  Total queries:     15
+  Average latency:   2897.2 ms
+  Timeout rate:      0.0%
+  Average quality:   8.60/10
+  Total cost:        $0.000583
+
+Results by Query Category:
+----------------------------------------------------------------------------------------------------
+Category      Count    Latency    Quality         Cost   Top Models                              
+----------------------------------------------------------------------------------------------------
+simple            3      150ms     10.00/10 $  0.000004   llama-3.2-3b@edge(3)
+moderate          3     1094ms      8.67/10 $  0.000125   llama-3.2-3b@edge(3)
+complex           3     7049ms      7.00/10 $  0.000222   gemma-3n-e4b@edge(3)
+reasoning         3      883ms      9.00/10 $  0.000046   llama-3.2-3b@edge(2), gemma-3n-e4b@edge(1)
+coding            3     5310ms      8.33/10 $  0.000185   gemma-3n-e4b@edge(3)
+
+Results by Model Tier:
+----------------------------------------------------------------------------------------------------
+  Tier        Count  Avg Latency  Avg Quality   Total Cost
+  ---------- ------ ------------ ------------ ------------
+  small          15       2897ms        8.60/10 $  0.000583
+
+Results by Deployment:
+----------------------------------------------------------------------------------------------------
+  Deploy    Count  Avg Latency  Avg Quality   Total Cost
+  -------- ------ ------------ ------------ ------------
+  edge         15       2897ms        8.60/10 $  0.000583
+
+====================================================================================================
+ROUTER COMPARISON
+====================================================================================================
+
+Router                               Queries  Avg Latency  Avg Quality     Total Cost
+----------------------------------------------------------------------------------------------------
+Random                                    15      11294ms        7.80/10 $    0.000951
+Static(gemma-3-4b@edge)                   15       3462ms        7.87/10 $    0.000017
+Static(mistral-small-24b@cloud)           15      34761ms        8.41/10 $    0.003691
+LatencyAndQualityAwareProbing             15       2897ms        8.60/10 $    0.000583
+----------------------------------------------------------------------------------------------------
+
+Best Latency:  LatencyAndQualityAwareProbing
+Best Quality:  LatencyAndQualityAwareProbing
+Lowest Cost:   Static(gemma-3-4b@edge)

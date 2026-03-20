@@ -1,0 +1,301 @@
+uv run python solutions/run_eval.py
+================================================================================
+CUSTOM ROUTER EVALUATION
+================================================================================
+
+--- Benchmarking baselines ---
+
+  Benchmarking: Random
+  ----------------------------------------
+  Phase 1: Running inference...
+  [simple] gemma-3n-e4b@edge: latency=313ms
+  [simple] gemma-3-4b@cloud: latency=2191ms
+  Rate limited, waiting 10s (attempt 1/3)
+  [simple] trinity-mini@cloud: latency=2914ms
+  [moderate] gemma-3n-e4b@edge: latency=3666ms
+  [moderate] gemma-3-4b@cloud: latency=19855ms
+  [moderate] gemma-3-4b@edge: latency=3861ms
+  Rate limited, waiting 10s (attempt 1/3)
+  [complex] gemma-3n-e4b@edge: latency=3515ms
+  Rate limited, waiting 10s (attempt 1/3)
+  [complex] gemma-3-4b@edge: latency=3666ms
+  [reasoning] gemma-3-4b@cloud: latency=2605ms
+  Rate limited, waiting 10s (attempt 1/3)
+  [reasoning] gemma-3-4b@edge: latency=372ms
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  [complex] gemma-3n-e4b@cloud: latency=19387ms
+  HTTP error: Client error '402 Payment Required' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  [coding] gemma-3-4b@cloud: latency=20912ms
+  HTTP error: Client error '404 Not Found' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404
+  Failed after 3 retries: None
+  Phase 2: Batch evaluating 12 responses...
+    Evaluating batch 1/3 (5 items)...
+    Evaluating batch 2/3 (5 items)...
+    Evaluating batch 3/3 (2 items)...
+  [simple] gemma-3-4b@cloud: quality=8.5/10
+  [simple] trinity-mini@cloud: quality=9.0/10
+  [simple] gemma-3n-e4b@edge: quality=9.0/10
+  [moderate] gemma-3n-e4b@edge: quality=8.5/10
+  [moderate] gemma-3-4b@edge: quality=9.5/10
+  [moderate] gemma-3-4b@cloud: quality=9.0/10
+  [complex] gemma-3n-e4b@edge: quality=8.0/10
+  [complex] gemma-3-4b@edge: quality=7.0/10
+  [complex] gemma-3n-e4b@cloud: quality=5.0/10
+  [reasoning] gemma-3-4b@edge: quality=4.0/10
+  [reasoning] gemma-3-4b@cloud: quality=8.5/10
+  [coding] gemma-3-4b@cloud: quality=10.0/10
+
+  Benchmarking: Static(gemma-3-4b@edge)
+  ----------------------------------------
+  Phase 1: Running inference...
+  [simple] gemma-3-4b@edge: latency=418ms
+  [simple] gemma-3-4b@edge: latency=418ms
+  [simple] gemma-3-4b@edge: latency=484ms
+  [moderate] gemma-3-4b@edge: latency=3728ms
+  [moderate] gemma-3-4b@edge: latency=4277ms
+  [moderate] gemma-3-4b@edge: latency=4368ms
+  [complex] gemma-3-4b@edge: latency=3830ms
+  [reasoning] gemma-3-4b@edge: latency=310ms
+  [complex] gemma-3-4b@edge: latency=3954ms
+  [complex] gemma-3-4b@edge: latency=4009ms
+  [reasoning] gemma-3-4b@edge: latency=611ms
+  [reasoning] gemma-3-4b@edge: latency=1082ms
+  [coding] gemma-3-4b@edge: latency=2348ms
+  [coding] gemma-3-4b@edge: latency=3624ms
+  [coding] gemma-3-4b@edge: latency=3817ms
+  Phase 2: Batch evaluating 15 responses...
+    Evaluating batch 1/3 (5 items)...
+    Evaluating batch 2/3 (5 items)...
+    Evaluating batch 3/3 (5 items)...
+  [simple] gemma-3-4b@edge: quality=6.0/10
+  [simple] gemma-3-4b@edge: quality=8.0/10
+  [simple] gemma-3-4b@edge: quality=6.0/10
+  [moderate] gemma-3-4b@edge: quality=7.0/10
+  [moderate] gemma-3-4b@edge: quality=7.0/10
+  [moderate] gemma-3-4b@edge: quality=9.0/10
+  [complex] gemma-3-4b@edge: quality=8.0/10
+  [complex] gemma-3-4b@edge: quality=7.0/10
+  [complex] gemma-3-4b@edge: quality=6.0/10
+  [reasoning] gemma-3-4b@edge: quality=5.0/10
+  [reasoning] gemma-3-4b@edge: quality=9.5/10
+  [reasoning] gemma-3-4b@edge: quality=9.0/10
+  [coding] gemma-3-4b@edge: quality=10.0/10
+  [coding] gemma-3-4b@edge: quality=8.5/10
+  [coding] gemma-3-4b@edge: quality=10.0/10
+
+  Benchmarking: Static(mistral-small-24b@cloud)
+  ----------------------------------------
+  Phase 1: Running inference...
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Failed after 3 retries: None
+  Failed after 3 retries: None
+  Failed after 3 retries: None
+  HTTP error: Client error '402 Payment Required' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+  HTTP error: Client error '402 Payment Required' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+  HTTP error: Client error '402 Payment Required' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+  HTTP error: Client error '402 Payment Required' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+  HTTP error: Client error '402 Payment Required' for url 'https://openrouter.ai/api/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Failed after 3 retries: None
+  Failed after 3 retries: None
+  Failed after 3 retries: None
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Failed after 3 retries: None
+  Failed after 3 retries: None
+  Failed after 3 retries: None
+  Rate limited, waiting 10s (attempt 1/3)
+  Rate limited, waiting 20s (attempt 2/3)
+  Rate limited, waiting 40s (attempt 3/3)
+  Failed after 3 retries: None
+
+  Cooling down 90s before custom router...
+
+--- Benchmarking LatencyAndQualityAwareProbing ---
+  Phase 1: Running inference...
+  [simple] gemma-3n-e4b@edge: latency=222ms
+  [simple] gemma-3n-e4b@edge: latency=246ms
+  [simple] gemma-3n-e4b@edge: latency=691ms
+  [moderate] gemma-3n-e4b@edge: latency=3823ms
+  [moderate] gemma-3n-e4b@edge: latency=4097ms
+  [moderate] gemma-3n-e4b@edge: latency=3722ms
+  [complex] gemma-3n-e4b@edge: latency=3875ms
+  [complex] gemma-3n-e4b@edge: latency=3732ms
+  [complex] gemma-3n-e4b@edge: latency=3798ms
+  [reasoning] gemma-3n-e4b@edge: latency=294ms
+  [reasoning] gemma-3n-e4b@edge: latency=424ms
+  [reasoning] gemma-3n-e4b@edge: latency=899ms
+  [coding] gemma-3-4b@edge: latency=2349ms
+  [coding] gemma-3-4b@edge: latency=3646ms
+  [coding] gemma-3-4b@edge: latency=3706ms
+  Phase 2: Batch evaluating 15 responses...
+    Evaluating batch 1/3 (5 items)...
+    Evaluating batch 2/3 (5 items)...
+    Evaluating batch 3/3 (5 items)...
+  [simple] gemma-3n-e4b@edge: quality=7.0/10
+  [simple] gemma-3n-e4b@edge: quality=8.0/10
+  [simple] gemma-3n-e4b@edge: quality=7.0/10
+  [moderate] gemma-3n-e4b@edge: quality=6.0/10
+  [moderate] gemma-3n-e4b@edge: quality=7.0/10
+  [moderate] gemma-3n-e4b@edge: quality=10.0/10
+  [complex] gemma-3n-e4b@edge: quality=7.0/10
+  [complex] gemma-3n-e4b@edge: quality=8.0/10
+  [complex] gemma-3n-e4b@edge: quality=7.0/10
+  [reasoning] gemma-3n-e4b@edge: quality=9.0/10
+  [reasoning] gemma-3n-e4b@edge: quality=10.0/10
+  [reasoning] gemma-3n-e4b@edge: quality=10.0/10
+  [coding] gemma-3-4b@edge: quality=10.0/10
+  [coding] gemma-3-4b@edge: quality=9.0/10
+  [coding] gemma-3-4b@edge: quality=9.0/10
+
+====================================================================================================
+RANDOM BENCHMARK RESULTS
+====================================================================================================
+
+Overall Statistics:
+  Total queries:     12
+  Average latency:   6938.2 ms
+  Timeout rate:      0.0%
+  Average quality:   8.00/10
+  Total cost:        $0.000346
+
+Results by Query Category:
+----------------------------------------------------------------------------------------------------
+Category      Count    Latency    Quality         Cost   Top Models                              
+----------------------------------------------------------------------------------------------------
+simple            3     1806ms      8.83/10 $  0.000129   gemma-3-4b@cloud(1), trinity-mini@cloud(1)
+moderate          3     9127ms      9.00/10 $  0.000074   gemma-3n-e4b@edge(1), gemma-3-4b@edge(1)
+complex           3     8856ms      6.67/10 $  0.000140   gemma-3n-e4b@edge(1), gemma-3-4b@edge(1)
+reasoning         2     1488ms      6.25/10 $  0.000003   gemma-3-4b@edge(1), gemma-3-4b@cloud(1)
+coding            1    20912ms     10.00/10 $  0.000001   gemma-3-4b@cloud(1)
+
+Results by Model Tier:
+----------------------------------------------------------------------------------------------------
+  Tier        Count  Avg Latency  Avg Quality   Total Cost
+  ---------- ------ ------------ ------------ ------------
+  small          11       7304ms        7.91/10 $  0.000220
+  medium          1       2914ms        9.00/10 $  0.000125
+
+Results by Deployment:
+----------------------------------------------------------------------------------------------------
+  Deploy    Count  Avg Latency  Avg Quality   Total Cost
+  -------- ------ ------------ ------------ ------------
+  edge          6       2565ms        7.67/10 $  0.000140
+  cloud         6      11311ms        8.33/10 $  0.000205
+
+====================================================================================================
+STATIC(GEMMA-3-4B@EDGE) BENCHMARK RESULTS
+====================================================================================================
+
+Overall Statistics:
+  Total queries:     15
+  Average latency:   2485.2 ms
+  Timeout rate:      0.0%
+  Average quality:   7.73/10
+  Total cost:        $0.000017
+
+Results by Query Category:
+----------------------------------------------------------------------------------------------------
+Category      Count    Latency    Quality         Cost   Top Models                              
+----------------------------------------------------------------------------------------------------
+simple            3      440ms      6.67/10 $  0.000002   gemma-3-4b@edge(3)
+moderate          3     4124ms      7.67/10 $  0.000002   gemma-3-4b@edge(3)
+complex           3     3931ms      7.00/10 $  0.000004   gemma-3-4b@edge(3)
+reasoning         3      668ms      7.83/10 $  0.000008   gemma-3-4b@edge(3)
+coding            3     3263ms      9.50/10 $  0.000002   gemma-3-4b@edge(3)
+
+Results by Model Tier:
+----------------------------------------------------------------------------------------------------
+  Tier        Count  Avg Latency  Avg Quality   Total Cost
+  ---------- ------ ------------ ------------ ------------
+  small          15       2485ms        7.73/10 $  0.000017
+
+Results by Deployment:
+----------------------------------------------------------------------------------------------------
+  Deploy    Count  Avg Latency  Avg Quality   Total Cost
+  -------- ------ ------------ ------------ ------------
+  edge         15       2485ms        7.73/10 $  0.000017
+No results to display.
+
+====================================================================================================
+LATENCYANDQUALITYAWAREPROBING BENCHMARK RESULTS
+====================================================================================================
+
+Overall Statistics:
+  Total queries:     15
+  Average latency:   2368.2 ms
+  Timeout rate:      0.0%
+  Average quality:   8.27/10
+  Total cost:        $0.000519
+
+Results by Query Category:
+----------------------------------------------------------------------------------------------------
+Category      Count    Latency    Quality         Cost   Top Models                              
+----------------------------------------------------------------------------------------------------
+simple            3      386ms      7.33/10 $  0.000015   gemma-3n-e4b@edge(3)
+moderate          3     3881ms      7.67/10 $  0.000238   gemma-3n-e4b@edge(3)
+complex           3     3801ms      7.33/10 $  0.000230   gemma-3n-e4b@edge(3)
+reasoning         3      539ms      9.67/10 $  0.000033   gemma-3n-e4b@edge(3)
+coding            3     3233ms      9.33/10 $  0.000002   gemma-3-4b@edge(3)
+
+Results by Model Tier:
+----------------------------------------------------------------------------------------------------
+  Tier        Count  Avg Latency  Avg Quality   Total Cost
+  ---------- ------ ------------ ------------ ------------
+  small          15       2368ms        8.27/10 $  0.000519
+
+Results by Deployment:
+----------------------------------------------------------------------------------------------------
+  Deploy    Count  Avg Latency  Avg Quality   Total Cost
+  -------- ------ ------------ ------------ ------------
+  edge         15       2368ms        8.27/10 $  0.000519
+
+====================================================================================================
+ROUTER COMPARISON
+====================================================================================================
+
+Router                               Queries  Avg Latency  Avg Quality     Total Cost
+----------------------------------------------------------------------------------------------------
+Random                                    12       6938ms        8.00/10 $    0.000346
+Static(gemma-3-4b@edge)                   15       2485ms        7.73/10 $    0.000017
+Static(mistral-small-24b@cloud)          N/A          N/A          N/A            N/A
+LatencyAndQualityAwareProbing             15       2368ms        8.27/10 $    0.000519
+----------------------------------------------------------------------------------------------------
+
+Best Latency:  LatencyAndQualityAwareProbing
+Best Quality:  LatencyAndQualityAwareProbing
+Lowest Cost:   Static(gemma-3-4b@edge)

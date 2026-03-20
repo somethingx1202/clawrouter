@@ -44,7 +44,8 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         cost_per_million_output=0.10   # Emulated: $0.10 per 1M output tokens
     ),
     "llama-3.2-3b": ModelConfig(
-        model_id="meta-llama/llama-3.2-3b-instruct:free",
+        # model_id="meta-llama/llama-3.2-3b-instruct:free",
+        model_id="meta-llama/llama-3.2-3b-instruct",
         display_name="Llama 3.2 3B",
         tier=ModelTier.SMALL,
         cost_per_million_input=0.03,   # Emulated: $0.03 per 1M input tokens
@@ -69,6 +70,7 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         cost_per_million_output=0.30   # Emulated: $0.30 per 1M output tokens
     ),
     "gemma-3-12b": ModelConfig(
+        # model_id="google/gemma-3-12b-it:free",
         model_id="google/gemma-3-12b-it:free",
         display_name="Gemma 3 12B",
         tier=ModelTier.MEDIUM,
@@ -76,14 +78,16 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
         cost_per_million_output=0.30   # Emulated: $0.30 per 1M output tokens
     ),
     "mistral-small-24b": ModelConfig(
-        model_id="mistralai/mistral-small-3.1-24b-instruct:free",
+        # model_id="mistralai/mistral-small-3.1-24b-instruct:free",
+        model_id="mistralai/mistral-small-3.1-24b-instruct",
         display_name="Mistral Small 3.1 24B",
         tier=ModelTier.MEDIUM,
         cost_per_million_input=0.20,   # Emulated: $0.20 per 1M input tokens
         cost_per_million_output=0.50   # Emulated: $0.50 per 1M output tokens
     ),
     "gemma-3-27b": ModelConfig(
-        model_id="google/gemma-3-27b-it:free",
+        # model_id="google/gemma-3-27b-it:free",
+        model_id="google/gemma-3-27b-it",
         display_name="Gemma 3 27B",
         tier=ModelTier.MEDIUM,
         cost_per_million_input=0.25,   # Emulated: $0.25 per 1M input tokens
@@ -101,7 +105,8 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
     # LARGE TIER - High quality models
     # =========================================================================
     "llama-3.3-70b": ModelConfig(
-        model_id="meta-llama/llama-3.3-70b-instruct:free",
+        # model_id="meta-llama/llama-3.3-70b-instruct:free",
+        model_id="meta-llama/llama-3.3-70b-instruct",
         display_name="Llama 3.3 70B",
         tier=ModelTier.LARGE,
         cost_per_million_input=0.50,   # Emulated: $0.50 per 1M input tokens
@@ -112,7 +117,8 @@ MODEL_REGISTRY: Dict[str, ModelConfig] = {
     # REASONING TIER - Specialized reasoning models
     # =========================================================================
     "deepseek-r1-0528": ModelConfig(
-        model_id="deepseek/deepseek-r1-0528:free",
+        # model_id="deepseek/deepseek-r1-0528:free",
+        model_id="deepseek/deepseek-r1-0528",
         display_name="DeepSeek R1 0528",
         tier=ModelTier.REASONING,
         cost_per_million_input=2.00,   # Emulated: $2.00 per 1M input tokens
